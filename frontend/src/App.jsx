@@ -6,6 +6,7 @@ import DashboardEnhanced from './pages/DashboardEnhanced'
 import PlaylistView from './pages/PlaylistView'
 import VideoPlayerSimple from './pages/VideoPlayerSimple'
 import PlaylistViewPage from './pages/PlaylistViewPage'
+import CoursePage from './pages/CoursePage'
 import ProgressDashboard from './pages/ProgressDashboard'
 import Layout from './components/Layout'
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="dashboard" element={<DashboardEnhanced user={user} />} />
           <Route path="playlist/:id" element={<PlaylistView user={user} />} />
           <Route path="playlist/:playlistId/video/:videoId" element={<PlaylistViewPage user={user} />} />
+          <Route path="course/:playlistId/video/:videoId" element={<CoursePage user={user} />} />
           <Route path="video/:id" element={<VideoPlayerSimple user={user} />} />
           <Route path="progress" element={<ProgressDashboard user={user} />} />
         </Route>
